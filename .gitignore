@@ -1,0 +1,26 @@
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+
+# Virtual env
+venv/
+.venv/
+
+# Environment variables
+.env
+.env.py
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Python logs
+*.log
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# PDF documents (optional)
+*.pdf
