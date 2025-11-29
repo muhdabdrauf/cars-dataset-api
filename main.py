@@ -1,26 +1,26 @@
+import os
 import pandas as pd
+from dotenv import load_dotenv
 
-df = pd.read_csv("/Users/rauf/Desktop/car_dataset/data/cars.csv")
-# print(df.head())
+load_dotenv()
 
-# print(df.info())
+CSV_PATH = os.getenv("CSV_PATH")
 
-print("Duplicate rows:", df.duplicated().sum())
-
-print("Duplicate IDs:", df['id'].duplicated().sum())
-
-print(df.nunique())
-
-df['purchased_date'] = pd.to_datetime(df['purchased_date'])
-
-print(df['purchased_date'].min(), df['purchased_date'].max())
-
-print(df.dtypes)
-
-df["purchase_year"] = df["purchased_date"].dt.year
-df["purchase_month"] = df["purchased_date"].dt.month
-df["purchase_day"] = df["purchased_date"].dt.day
-df["purchase_weekday"] = df["purchased_date"].dt.day_name()
-
+df = pd.read_csv(CSV_PATH)
 print(df.head())
-
+print()
+print(df.info())
+print()
+print("Duplicate rows:", df.duplicated().sum())
+print()
+print("Duplicate IDs:", df['id'].duplicated().sum())
+print()
+print(df.nunique())
+print()
+df['purchased_date'] = pd.to_datetime(df['purchased_date'])
+print()
+print(df['purchased_date'].min(), df['purchased_date'].max())
+print()
+print(df.dtypes)
+print()
+print(df.head())

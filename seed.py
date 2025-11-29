@@ -120,4 +120,3 @@ def seed_from_csv(CSV_PATH):
 if __name__ == "__main__":
     Base.metadata.create_all(engine)
     seed_from_csv(CSV_PATH)
-        
